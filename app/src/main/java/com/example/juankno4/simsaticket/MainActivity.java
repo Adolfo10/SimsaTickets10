@@ -11,7 +11,8 @@ import com.example.juankno4.simsaticket.cTec.TecnicoInicioActivity;
 public class MainActivity extends AppCompatActivity {
  Button btn2;
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
