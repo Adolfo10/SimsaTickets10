@@ -9,7 +9,13 @@
     android:orientation="vertical">
 
 
-
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/contenedor2"
+        android:orientation="vertical"
+        android:layout_width="290dp"
+        android:layout_height="match_parent">
+    </LinearLayout>
 
     <android.support.v7.widget.Toolbar
         android:gravity="center"

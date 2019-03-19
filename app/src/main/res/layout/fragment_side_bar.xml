@@ -1,13 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="200dp"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#131313"
     tools:context=".SideBar">
 
     <!-- TODO: Update blank fragment layout -->
+    <ImageButton
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/fleci"
+        android:id="@+id/btniz"
+        />
     <TextView
+        android:paddingTop="20dp"
         android:id="@+id/txtpanel"
         android:layout_marginTop="20dp"
         android:textColor="@color/colorPrimary"
@@ -17,6 +24,7 @@
         android:text="PANEL DE CONTROL" />
 
     <Button
+
         android:textSize="20dp"
         android:textAlignment="textStart"
         android:textColor="@color/colorPrimary"

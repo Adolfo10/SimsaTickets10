@@ -1,12 +1,15 @@
 package com.example.juankno4.simsaticket;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.example.juankno4.simsaticket.cTec.TecnicoInicioActivity;
 
 
 /**
@@ -62,9 +65,22 @@ public class SideBar extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+                             Bundle savedInstanceState)
+    {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_side_bar, container, false);
+        //return inflater.inflate(R.layout.fragment_side_bar, container, false);
+        View vv = inflater.inflate(R.layout.fragment_side_bar, container, false);
+        vv.findViewById(R.id.btniz).setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                Intent intent = new Intent (v.getContext(), TecnicoInicioActivity.class);
+                startActivityForResult(intent, 0);
+            }
+        });
+
+        return vv;
     }
 
     // TODO: Rename method, update argument and hook method into UI event
