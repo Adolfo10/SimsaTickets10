@@ -24,7 +24,6 @@
         android:text="PANEL DE CONTROL" />
 
     <Button
-
         android:textSize="20dp"
         android:textAlignment="textStart"
         android:textColor="@color/colorPrimary"
@@ -34,5 +33,26 @@
         android:id="@+id/btntecinicio"
         android:layout_width="match_parent"
         android:layout_height="60dp" />
+
+    <Button
+
+        android:textSize="20dp"
+        android:textAlignment="textStart"
+        android:textColor="@color/colorPrimary"
+        android:text="Escribe lo que apetezcas"
+        android:background="#131313"
+        android:layout_marginTop="120dp"
+        android:id="@+id/btntecadprob"
+        android:layout_width="match_parent"
+        android:layout_height="60dp" />
+
+    <TextView
+        android:hint="Envia algo a otro Fragment..."
+        android:layout_marginTop="190dp"
+        android:id="@+id/texto"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/colorPrimaryDark"/>
+
 
 </FrameLayout>
