@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#2ABDFF"
+    tools:context=".fragment_datos">
+
+    <Button
+        android:id="@+id/btnirinicio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FF2727"
+        android:text="REGRESA AL INICIO"/>
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:gravity="center_vertical"
+        android:text="INFORMACION QUE VIENE DEL FRAGMENT 1"
+        android:id="@+id/txtnachos"
+        android:layout_below="@+id/btnirinicio"
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
+
+    <TextView
+        android:textColor="#F50808"
+        android:textSize="40dp"
+        android:hint="RECIBIR..."
+        android:layout_below="@+id/txtnachos"
+        android:id="@+id/txtrecibir"
+        android:layout_width="match_parent"
+        android:layout_height="90dp" />
+
+    <Button
+        android:layout_marginTop="150dp"
+        android:id="@+id/btnenviar"
+        android:layout_below="@+id/txtrecibir"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#F7CE02"
+        android:text="ENVIAR INFORMACION AL ACTIVITY"/>
+</RelativeLayout>

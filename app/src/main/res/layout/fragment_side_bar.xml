@@ -13,6 +13,7 @@
         android:background="@drawable/fleci"
         android:id="@+id/btniz"
         />
+
     <TextView
         android:paddingTop="20dp"
         android:id="@+id/txtpanel"
@@ -36,13 +37,13 @@
 
     <Button
 
-        android:textSize="20dp"
+        android:textSize="15dp"
         android:textAlignment="textStart"
         android:textColor="@color/colorPrimary"
-        android:text="Escribe lo que apetezcas"
+        android:text="Escribe lo que apetezcas y envialo aqui"
         android:background="#131313"
         android:layout_marginTop="120dp"
-        android:id="@+id/btntecadprob"
+        android:id="@+id/btneviarinfo"
         android:layout_width="match_parent"
         android:layout_height="60dp" />
 

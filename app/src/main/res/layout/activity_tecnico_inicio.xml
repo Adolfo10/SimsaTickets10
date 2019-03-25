@@ -13,7 +13,16 @@
         android:visibility="gone"
         android:id="@+id/contenedor2"
         android:orientation="vertical"
-        android:layout_width="290dp"
+        android:layout_width="210dp"
+        android:layout_height="match_parent">
+    </LinearLayout>
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/contenedor3"
+        android:orientation="vertical"
+        android:layout_marginLeft="196dp"
+        android:layout_width="210dp"
         android:layout_height="match_parent">
     </LinearLayout>
 
@@ -78,7 +87,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="1dp"
-                android:text="Bienvenido Katia"
+                android:text="Bienvenido Adolfo"
                 android:textSize="28dp"
                 android:textAlignment="center"
                 android:textColor="#000" />

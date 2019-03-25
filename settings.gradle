@@ -1,1 +1,3 @@
 include ':app'
+include ':fragment_datos'
+include ':SideBar'
