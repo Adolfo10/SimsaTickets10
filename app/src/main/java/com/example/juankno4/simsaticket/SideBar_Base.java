@@ -98,4 +98,6 @@ public class SideBar_Base extends AppCompatActivity
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
+
+
 }

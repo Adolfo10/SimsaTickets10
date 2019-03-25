@@ -92,16 +92,6 @@ public class fragment_datos extends Fragment {
 
 
 
-        vv.findViewById(R.id.btnenviar).setOnClickListener(new View.OnClickListener()
-        {
-            @Override
-            public void onClick(View v)
-            {
-
-
-            }
-        });
-
 
 
         return  vv;

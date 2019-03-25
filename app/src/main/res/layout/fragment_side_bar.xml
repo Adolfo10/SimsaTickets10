@@ -36,7 +36,6 @@
         android:layout_height="60dp" />
 
     <Button
-
         android:textSize="15dp"
         android:textAlignment="textStart"
         android:textColor="@color/colorPrimary"
@@ -47,13 +46,23 @@
         android:layout_width="match_parent"
         android:layout_height="60dp" />
 
-    <TextView
+    <EditText
         android:hint="Envia algo a otro Fragment..."
         android:layout_marginTop="190dp"
         android:id="@+id/texto"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:background="@color/colorPrimaryDark"/>
+
+    <LinearLayout
+        android:layout_marginTop="250dp"
+        android:visibility="gone"
+        android:id="@+id/contenedor3"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </LinearLayout>
+
 
 
 </FrameLayout>

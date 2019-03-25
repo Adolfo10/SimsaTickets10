@@ -5,11 +5,13 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -24,15 +26,16 @@ import com.example.juankno4.simsaticket.cTec.TecnicoInicioActivity;
  * Use the {@link SideBar#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class SideBar extends Fragment {
+public class SideBar extends Fragment implements  fragment_datos.OnFragmentInteractionListener{
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
     //private int score;
-    TextView text;
+    EditText text;
     Button btn;
     Comunicador comunicador;
+    LinearLayout ly;
 
     // TODO: Rename and change types of parameters
     private String mParam1;
@@ -75,6 +78,11 @@ public class SideBar extends Fragment {
 
     }
 
+    @Override
+    public void onFragmentInteraction(Uri uri) {
+
+    }
+
     public interface Comunicador
     {
         public void enviar (String enviar);
@@ -90,33 +98,13 @@ public class SideBar extends Fragment {
         // Inflate the layout for this fragment
         //return inflater.inflate(R.layout.fragment_side_bar, container, false);
         //Toast.makeText(getContext(),"El Score es " + score,Toast.LENGTH_LONG).show();
-        View vv = inflater.inflate(R.layout.fragment_side_bar, container, false);
+        //View vv = inflater.inflate(R.layout.fragment_side_bar, container, false);
+        View v = inflater.inflate(R.layout.fragment_side_bar, container, false);
+        ly = v.findViewById(R.id.contenedor3);
+        text = v.findViewById(R.id.texto);
+        btn = v.findViewById(R.id.btneviarinfo);
 
-        text = vv.findViewById(R.id.texto);
-        btn = vv.findViewById(R.id.btneviarinfo);
-
-        switch (vv.getId())
-        {
-            case R.id.btniz:
-                Intent intent = new Intent (vv.getContext(), TecnicoInicioActivity.class);
-                startActivityForResult(intent, 0);
-                break;
-
-
-            case R.id.btneviarinfo:
-
-                String t = text.getText().toString();
-                comunicador.enviar(t);
-                Intent intent2 = new Intent (vv.getContext(), fragment_datos.class);
-                /*Bundle bundle = new Bundle();
-                bundle.putString("textokey",t);
-                intent2.putExtras(bundle);*/
-                startActivityForResult(intent2, 0);
-
-                break;
-        }
-
-       /* vv.findViewById(R.id.btniz).setOnClickListener(new View.OnClickListener()
+        /*vv.findViewById(R.id.btniz).setOnClickListener(new View.OnClickListener()
         {
             @Override
             public void onClick(View v)
@@ -126,19 +114,31 @@ public class SideBar extends Fragment {
             }
         });*/
 
-        /*vv.findViewById(R.id.btneviarinfo).setOnClickListener(new View.OnClickListener()
+
+
+        v.findViewById(R.id.btneviarinfo).setOnClickListener(new View.OnClickListener()
         {
             @Override
             public void onClick(View v)
             {
-                Intent intent2 = new Intent (v.getContext(), fragment_datos.class);
-                Bundle bundle = new Bundle();
-                bundle.putString("texto",);
-                startActivityForResult(intent2, 0);
-            }
-        });*/
+                String t = text.getText().toString();
+                comunicador.enviar(t);
+               Toast.makeText(getContext(),"SE ENVIO CORRECTAMENTE",Toast.LENGTH_LONG).show();
+                //fragment_datos f = new fragment_datos();
+                //FragmentTransaction ff= getSupportFragmentManager().beginTransaction();
+                //fragment_datos f1 = fragment_datos.newInstance("id","ADOLFO");
+                //ff.replace(R.id.contenedor3,f1).commit();
 
-        return vv;
+                //Intent intent2 = new Intent (v.getContext(), fragment_datos.class);
+                /*Bundle bundle = new Bundle();
+                bundle.putString("textokey",t);
+                intent2.putExtras(bundle);*/
+                //startActivity(intent2);
+               // startActivityForResult(intent2, 0);
+            }
+        });
+
+        return v;
     }
 
     // TODO: Rename method, update argument and hook method into UI event
